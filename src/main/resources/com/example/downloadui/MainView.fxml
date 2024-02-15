@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="196.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.downloadui.MainView">
+   <children>
+      <Label text="Local Dictionary">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </Label>
+      <BorderPane prefHeight="26.0" prefWidth="600.0">
+         <center>
+            <Label fx:id="localDir" prefHeight="34.0" prefWidth="507.0" style="-fx-border-width: 1; -fx-border-style: solid;" text="C:/" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+         </center>
+         <right>
+            <HBox fx:id="selectDir" onMouseClicked="#setSelectDir" prefHeight="100.0" prefWidth="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <SVGPath content="M 0 5 H 20 M 0 15 H 20 M 0 25 H 20" stroke="BLACK" />
+               </children>
+               <BorderPane.margin>
+                  <Insets right="10.0" />
+               </BorderPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+         </right></BorderPane>
+      <Label text="Website Home Page">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </Label>
+      <TextField fx:id="webPage" prefHeight="26.0" prefWidth="523.0">
+         <VBox.margin>
+            <Insets bottom="10.0" left="25.0" right="10.0" />
+         </VBox.margin>
+      </TextField>
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="start" onMouseClicked="#startDownload" text="Start Download">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <SVGPath content="M 0 0 L 10 10 L 0 20 Z" fill="#00fa04">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </SVGPath>
+         </children>
+      </HBox>
+   </children>
+</VBox>

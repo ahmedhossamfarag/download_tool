@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="169.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.downloadui.ProgressView">
+   <children>
+      <StackPane prefHeight="36.0" prefWidth="600.0">
+         <children>
+            <SVGPath fx:id="play" content="M 0 0 L 30 15 L 0 30 Z" fill="#0af72e" onMouseClicked="#playClick" stroke="#0af72e" strokeWidth="5.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></SVGPath>
+            <SVGPath fx:id="stop" content="M 0 0 L 30 15 L 0 30 Z M 20 0 V 30" fill="#0af72e" onMouseClicked="#stopClick" stroke="#0af72e" strokeWidth="5.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></SVGPath>
+         </children>
+      </StackPane>
+      <BorderPane prefHeight="41.0" prefWidth="600.0">
+         <left>
+            <Label text="Remain" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Label fx:id="remain" text="00" BorderPane.alignment="CENTER" />
+         </right>
+         <padding>
+            <Insets left="100.0" right="100.0" />
+         </padding>
+      </BorderPane>
+      <BorderPane prefHeight="43.0" prefWidth="600.0">
+         <left>
+            <Label text="Done" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Label fx:id="done" text="00" BorderPane.alignment="CENTER" />
+         </right>
+         <padding>
+            <Insets left="100.0" right="100.0" />
+         </padding>
+      </BorderPane>
+      <Label fx:id="link" text="http://">
+         <VBox.margin>
+            <Insets left="20.0" top="10.0" />
+         </VBox.margin>
+      </Label>
+   </children>
+</VBox>
